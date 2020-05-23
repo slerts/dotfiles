@@ -1,0 +1,42 @@
+#!/usr/bin/env sh
+
+refresh() {
+	#WALLPAPER
+	#wal -i ~/.wallpaper/motocyber.png -n -a 85 &
+	~/.fehbg &
+
+	#COMPOSITOR
+	#killall -q compton
+	#while pgrep -x compton >/dev/null; do sleep 1; done
+	#compton -CGb &
+
+	#TASKBAR
+	#killall -q polybar
+	#while pgrep -x polybar >/dev/null; do sleep 1; done
+	#polybar -r main-top &
+	#polybar -r main &
+	#polybar -r workspaces &
+	#polybar -r workspaces2 &
+
+}
+
+runonce() {
+	#POLKIT
+	#/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+	#SCREEN
+	#redshift -l 43.83:-79.11 -b 1.0:0.8 &
+	#redshift-gtk
+
+	#NOTIFICATIONS
+	#killall -q dunst
+	#while pgrep -x dunst >/dev/null; do sleep 1; done
+	#dunst &
+
+}
+
+if [ "$1" == "-r" ] ;then
+	refresh
+else
+	runonce
+fi

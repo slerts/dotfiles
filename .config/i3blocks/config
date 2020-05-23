@@ -1,0 +1,39 @@
+full_text=〉
+align=center
+separator=false
+color=#ffffff
+separator_block_width=10
+markup=pango
+
+[mediaplayer]
+command=playerctl metadata --format "{{ artist }} - {{ title }}"
+interval=2
+label=<span color="#a9e185"> </span>
+
+[separator]
+
+[arch-update]
+command=check-updates
+interval=3600
+label=<span color="#1793D1"> </span>
+
+[separator]
+
+[volume]
+command=pulseaudio-ctl full-status | awk '{ printf "%i%\n", $1 }'
+interval=2
+label=<span color="#ff79c6"> </span>
+
+[separator]
+
+[time]
+command=date '+%H:%M'
+interval=1
+label=<span color="#ffb86c"> </span>
+
+[separator]
+
+[date]
+command=date '+%m.%d.%Y'
+interval=60
+label=<span color="#8be9fd"> </span>
