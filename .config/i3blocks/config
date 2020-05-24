@@ -1,14 +1,17 @@
-full_text=〉
+full_text=❮
 align=center
 separator=false
 color=#ffffff
 separator_block_width=10
 markup=pango
 
+[separator]
+
 [mediaplayer]
 command=playerctl metadata --format "{{ artist }} - {{ title }}"
 interval=2
 label=<span color="#a9e185"> </span>
+align=center
 
 [separator]
 

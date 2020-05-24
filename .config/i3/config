@@ -1,61 +1,70 @@
 # vim: filetype=i3
 
-# variables
+#####----- VARIABLES -----#####
 set $mod Mod4
 set $term alacritty
 set $filemanager Thunar
 
-# font
+#####----- FONTS -----#####
 font pango:SpaceMono Nerd Font Mono 7
 
+#####----- WINDOW DECORATIONS -----#####
 # remove titlebars for i3-gaps
 for_window [class="^.*"] border pixel 0
 hide_edge_borders both
 
-# i3-gaps
+######----- GAPS -----#####
 gaps inner 5
 gaps outer 5
 
-# autostarting applications
+#####----- AUTOSTARTING APPLICATIONS -----#####
+#
 # use exec for applications that only need to be run once
 # use exec_always for applications that need to be run on every refresh
-
+#
 # composite manager
 exec --no-startup-id picom -b --xrender-sync-fence &
-
+#
 # wallpaper
 exec_always --no-startup-id $HOME/.fehbg &
-
+#
 #polybar
 #exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
-
+#
 # notifications
 exec --no-startup-id dunst &
-
+#
 # thunar daemon enables automounting of usb devices
 exec --no-startup-id thunar --daemon &
-
+#
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id xidlehook --not-when-audio --not-when-fullscreen --timer 360 "betterlockscreen -l dim" "" &
-
+#
 # unclutter - hide mouse cursor while typing
 exec --no-startup-id unclutter &
 
+
+#####----- FLOATING WINDOWS -----#####
+#
 # make specific windwos floating window
 # sxiv for viewing pictures
 for_window [class="Sxiv"] floating enable
+#
 # mpv for videos
 for_window [class="mpv"] floating enable
 
+
+#####----- SCRATCHPAD -----#####
+#
 # start gotop in a scratchpad window
 exec --no-startup-id $term --config-file ~/.config/alacritty/alacritty-float.yml --class gotop -e gotop
 for_window [instance="gotop"] move scratchpad
 for_window [instance="gotop"] resize set 2880 1620
 for_window [instance="gotop"] move absolute position center
 bindsym $mod+F1 [instance="gotop"] scratchpad show
-
+#
 # start vim todo.txt in a scratchpad window
 exec --no-startup-id $term --config-file ~/.config/alacritty/alacritty-float.yml ---class todo -e nvim todo.txt
 for_window [instance="todo"] move scratchpad
@@ -63,18 +72,24 @@ for_window [instance="todo"] resize set 1480 1620
 for_window [instance="todo"] move absolute position center
 bindsym $mod+n [instance="todo"] scratchpad show
 
+
+#####----- AUDIO CONTROLS -----#####
+#
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym $mod+Shift+F6 exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-
-# user playerctl to control spotify
+#
+# use playerctl to control spotify
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+
+#####----- KEYBINDINGS -----#####
+#
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
 set $up k
@@ -245,6 +260,25 @@ bindsym Ctrl+Shift+f exec full-screenshot
 # selection/window
 bindsym Ctrl+Shift+s exec select-screenshot
 
+#####----- COLORS -----#####
+set $bg			#0d1926
+set $fg			#d9e6f2
+set $black		#000000
+set $bright_black	#262626
+set $red		#944b5c
+set $bright_red		#ddbcc3
+set $green		#5c944b
+set $bright_green	#c3ddbc
+set $yellow		#94834b
+set $bright_yellow	#ddd5bc
+set $blue		#4b5c94
+set $bright_blue	#bcc3dd
+set $magenta		#834b94
+set $bright_magenta	#d5bcdd
+set $cyan		#4b9483
+set $bright_cyan	#bcddd5
+set $white		#d8d8d8
+set $bright_white	#ffffff
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -255,6 +289,11 @@ bar {
 	i3bar_command i3bar --transparency
 	font pango: SpaceMono Nerd Font Regular 8
 	colors {
-		background #000000AA
+		#			Border	Background	Text
+		focused_workspace	$fg	$fg		$bg
+		active_workspace	$bg	$bg		$purple
+		inactive_workspace	$bg	$bg		$cyan
+		urgent_workspace	$bg	$bg		$magenta
+		background 			$bg
 	}	
 }
