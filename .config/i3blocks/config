@@ -11,14 +11,6 @@ markup=pango
 command=playerctl metadata --format "{{ artist }} - {{ title }}"
 interval=2
 label=<span color="#a9e185"> </span>
-align=center
-
-[separator]
-
-[arch-update]
-command=check-updates
-interval=3600
-label=<span color="#1793D1"> </span>
 
 [separator]
 
@@ -29,10 +21,10 @@ label=<span color="#ff79c6"> </span>
 
 [separator]
 
-[time]
-command=date '+%H:%M'
-interval=1
-label=<span color="#ffb86c"> </span>
+[arch-update]
+command=check-updates
+interval=3600
+label=<span color="#1793D1"> </span>
 
 [separator]
 
@@ -40,3 +32,10 @@ label=<span color="#ffb86c"> </span>
 command=date '+%m.%d.%Y'
 interval=60
 label=<span color="#8be9fd"> </span>
+
+[separator]
+
+[time]
+command=date '+%H:%M '
+interval=1
+label=<span color="#ffb86c"> </span>
