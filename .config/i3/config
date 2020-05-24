@@ -44,7 +44,8 @@ exec --no-startup-id xidlehook --not-when-audio --not-when-fullscreen --timer 36
 #
 # unclutter - hide mouse cursor while typing
 exec --no-startup-id unclutter &
-
+# insync - mount and sync gdrive
+exec --no-startup-id insync start &
 
 #####----- FLOATING WINDOWS -----#####
 #
