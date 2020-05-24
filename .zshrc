@@ -5,10 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# oh-my-zsh
-export ZSH=/usr/share/oh-my-zsh/
-export ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
-
 # shell history
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -17,7 +13,7 @@ SAVEHIST=1000
 # path
 # typeset prevents path from taking on duplicate entries
 typeset -U path
-path=(~/.local/bin $path[@])
+path=($path[@])
 
 # vim keybindings for zsh
 bindkey -v
