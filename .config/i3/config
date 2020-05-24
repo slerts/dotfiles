@@ -67,7 +67,7 @@ for_window [instance="gotop"] move absolute position center
 bindsym $mod+F1 [instance="gotop"] scratchpad show
 #
 # start vim todo.txt in a scratchpad window
-exec --no-startup-id $term --config-file ~/.config/alacritty/alacritty-float.yml ---class todo -e nvim todo.txt
+exec --no-startup-id $term --config-file ~/.config/alacritty/alacritty-float.yml ---class todo -e nvim ~/gdrive-ns/todo.txt
 for_window [instance="todo"] move scratchpad
 for_window [instance="todo"] resize set 1480 1620
 for_window [instance="todo"] move absolute position center
