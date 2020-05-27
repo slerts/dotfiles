@@ -1,18 +1,16 @@
-!*.font: xft:Hack:pixelsize=12
-!*.boldFont: xft:Hack:style=bold:pixelsize=12
-*.font: xft:SpaceMono Nerd Font Mono:pixelsize=12
-*.boldFont: xft:SpaceMono Nerd Font Mono:style=bold:pixelsize=12
-
 ! --------- Xft --------- 
-! HiDPI 
-Xft.dpi: 192
-! Standard DPI
-!Xft.dpi: 96
+#ifdef SRVR_arrakis
+  Xft.dpi: 192
+  Xcursor.size: 32
+ #else
+  Xft.dpi: 96
+  Xcursor.size: 16
+#endif
+
 Xft.antialias: true
 Xft.rgba: rgb
 Xft.hinting: true
 Xft.hintstyle: hintslight
-Xcursor.size: 32
 
 ! --------- ROFI ----------
 rofi.font: SpaceMono Nerd Font Mono 12
