@@ -58,6 +58,10 @@ alias vim='nvim'
 alias ls='ls --color=auto'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+#fzf keybinds
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
+
 # trigger oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
