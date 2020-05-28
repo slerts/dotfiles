@@ -38,7 +38,7 @@ label=<span color="#1793D1"> </span>
 #[separator]
 
 #[battery]
-#command=~/.config/i3blocks/i3blocks-contrib/battery/battery2/battery2
+#command=~/.config/i3blocks/i3blocks-contrib/battery2/battery2
 #markup=pango
 #interval=5
 
