@@ -15,6 +15,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Themes
     Plug 'joshdick/onedark.vim'
     Plug 'kaicataldo/material.vim'
+    Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
     " Intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Airline

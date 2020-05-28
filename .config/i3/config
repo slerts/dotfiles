@@ -262,24 +262,24 @@ bindsym Ctrl+Shift+f exec full-screenshot
 bindsym Ctrl+Shift+s exec select-screenshot
 
 #####----- COLORS -----#####
-set $bg			#0d1926
-set $fg			#d9e6f2
-set $black		#000000
-set $bright_black	#262626
-set $red		#944b5c
-set $bright_red		#ddbcc3
-set $green		#5c944b
-set $bright_green	#c3ddbc
-set $yellow		#94834b
-set $bright_yellow	#ddd5bc
-set $blue		#4b5c94
-set $bright_blue	#bcc3dd
-set $magenta		#834b94
-set $bright_magenta	#d5bcdd
-set $cyan		#4b9483
-set $bright_cyan	#bcddd5
-set $white		#d8d8d8
-set $bright_white	#ffffff
+set $bg			#1b182c
+set $fg			#cbe3e7
+set $black		#100e23
+set $bright_black	#565575
+set $red		#ff8080
+set $bright_red		#ff5458
+set $green		#95ffa4
+set $bright_green	#62d196
+set $yellow		#ffe9aa
+set $bright_yellow	#ffb378
+set $blue		#91ddff
+set $bright_blue	#65b2ff
+set $magenta		#c991e1
+set $bright_magenta	#906cff
+set $cyan		#aaffe4
+set $bright_cyan	#63f2f1
+set $white		#cbe3e7
+set $bright_white	#a6b3cc
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status

@@ -1,31 +1,31 @@
-full_text=❮
+full_text=
 align=center
 separator=false
 color=#ffffff
-separator_block_width=10
+separator_block_width=25
 markup=pango
 
-[separator]
+#[separator]
 
 [mediaplayer]
 command=playerctl metadata --format "{{ artist }} - {{ title }}"
 interval=2
-label=<span color="#a9e185"> </span>
+label=<span color="#95ffa4"> </span>
 
-[separator]
+#[separator]
 
 [volume]
 command=pulseaudio-ctl full-status | awk '{ printf "%i%\n", $1 }'
 interval=2
-label=<span color="#ff79c6"> </span>
+label=<span color="#aaffe4"> </span>
 
-[separator]
+#[separator]
 
 [check-updates]
 command=check-updates
 interval=3600
 label=<span color="#1793D1"> </span>
-#label=<span color="#1793D1"> </span>
+#label=<span color="#E95420"> </span>
 
 #[separator]
 
@@ -33,7 +33,7 @@ label=<span color="#1793D1"> </span>
 #command=iwgetid -r | tr '\n' ' ' && grep $(iwgetid -m | awk '{ printf "%s", $1 }') /proc/net/wireless | awk '{ printf "%i%\n", int($3 * 100 / 70) }'
 #instance=wlp11s0f3u1
 #interval=5
-#label=<span color="#ffb86c"> </span>
+#label=<span color="#cbe3e7"> </span>
 
 #[separator]
 
@@ -42,14 +42,14 @@ label=<span color="#1793D1"> </span>
 #markup=pango
 #interval=5
 
-[separator]
+#[separator]
 
 [date]
 command=date '+%m.%d.%Y'
 interval=60
-label=<span color="#8be9fd"> </span>
+label=<span color="#ff8080"> </span>
 
-[separator]
+#[separator]
 
 [time]
 command=date '+%H:%M '

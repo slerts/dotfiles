@@ -15,68 +15,34 @@ Xft.hintstyle: hintslight
 ! --------- ROFI ----------
 rofi.font: SpaceMono Nerd Font Mono 12
 
-! --- ~/.Xresources ------------------------------------------------------------
-! ------------------------------------------------------------------------------
-! --- generated with 4bit Terminal Color Scheme Designer -----------------------
-! ------------------------------------------------------------------------------
-! --- http://ciembor.github.com/4bit -------------------------------------------
-! ------------------------------------------------------------------------------
-
-! --- special colors ---
-
-*background: #0d1926
-*foreground: #d9e6f2
-
-! --- standard colors ---
-
+! Challenger Deep Xresources palette
+! https://github.com/challenger-deep-theme/xresources
+! special
+*.foreground:   #cbe3e7
+*.background:   #1b182c
+*.cursorColor:  #fbfcfc
 ! black
-*color0: #000000
-
-! bright_black
-*color8: #262626
-
+*.color0:       #100e23
+*.color8:       #565575
 ! red
-*color1: #944b5c
-
-! bright_red
-*color9: #ddbcc3
-
+*.color1:       #ff8080
+*.color9:       #ff5458
 ! green
-*color2: #5c944b
-
-! bright_green
-*color10: #c3ddbc
-
+*.color2:       #95ffa4
+*.color10:      #62d196
 ! yellow
-*color3: #94834b
-
-! bright_yellow
-*color11: #ddd5bc
-
+*.color3:       #ffe9aa
+*.color11:      #ffb378
 ! blue
-*color4: #4b5c94
-
-! bright_blue
-*color12: #bcc3dd
-
+*.color4:       #91ddff
+*.color12:      #65b2ff
 ! magenta
-*color5: #834b94
-
-! bright_magenta
-*color13: #d5bcdd
-
+*.color5:       #c991e1
+*.color13:      #906cff
 ! cyan
-*color6: #4b9483
-
-! bright_cyan
-*color14: #bcddd5
-
+*.color6:       #aaffe4
+*.color14:      #63f2f1
 ! white
-*color7: #d8d8d8
+*.color7:       #cbe3e7
+*.color15:      #a6b3cc
 
-! bright_white
-*color15: #ffffff
-
-! ------------------------------------------------------------------------------
-! --- end of terminal colors section -------------------------------------------
-! ------------------------------------------------------------------------------
