@@ -21,10 +21,25 @@ label=<span color="#ff79c6"> </span>
 
 [separator]
 
-[arch-update]
+[check-updates]
 command=check-updates
 interval=3600
 label=<span color="#1793D1"> </span>
+
+#[separator]
+
+#[wifi]
+#command=iwgetid -r | tr '\n' ' ' && grep $(iwgetid -m | awk '{ printf "%s", $1 }') /proc/net/wireless | awk '{ printf "%i%\n", int($3 * 100 / 70) }'
+#instance=wlp11s0f3u1
+#interval=5
+#label=<span color="#ffb86c"> </span>
+
+#[separator]
+
+#[battery-poly]
+#command=~/.config/i3blocks/i3blocks-contrib/battery-poly
+#LABEL=
+#interval=5
 
 [separator]
 
