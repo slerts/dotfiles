@@ -36,8 +36,8 @@ label=<span color="#1793D1"> </span>
 
 #[separator]
 
-#[battery-poly]
-#command=~/.config/i3blocks/i3blocks-contrib/battery-poly
+#[battery]
+#command=~/.config/i3blocks/i3blocks-contrib/battery/battery
 #LABEL=
 #interval=5
 
