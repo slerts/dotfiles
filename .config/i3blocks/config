@@ -25,6 +25,7 @@ label=<span color="#ff79c6"> </span>
 command=check-updates
 interval=3600
 label=<span color="#1793D1"> </span>
+#label=<span color="#1793D1"> </span>
 
 #[separator]
 
@@ -37,8 +38,8 @@ label=<span color="#1793D1"> </span>
 #[separator]
 
 #[battery]
-#command=~/.config/i3blocks/i3blocks-contrib/battery/battery
-#LABEL=
+#command=~/.config/i3blocks/i3blocks-contrib/battery/battery2/battery2
+#markup=pango
 #interval=5
 
 [separator]
