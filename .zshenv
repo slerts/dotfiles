@@ -1,5 +1,11 @@
 # oh-my-zsh
-export ZSH=/usr/share/oh-my-zsh/
+if [[ "$(hostname)" == "arrakis" ]]; then
+  export ZSH=/usr/share/oh-my-zsh/
+else
+  export ZSH=$HOME/.oh-my-zsh/
+  export PATH=/snap/bin:$PATH
+fi
+
 export ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
 
 # locale
