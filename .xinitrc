@@ -39,16 +39,18 @@ eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 # SSH agent lock
 export SSH_AUTH_SOCK
 
-# HiDPI scaling settings
-export GDK_SCALE=2
-export GDK_DPI_SCALE=0.5
-export QT_AUTO_SCREEN_SET_FACTOR=0
-export QT_SCALE_FACTOR=2
-export QT_FONT_DPI=96
+if [[ "$(hostname)" == "arrakis" ]]; then
+  # HiDPI scaling settings
+  export GDK_SCALE=2
+  export GDK_DPI_SCALE=0.5
+  export QT_AUTO_SCREEN_SET_FACTOR=0
+  export QT_SCALE_FACTOR=2
+  export QT_FONT_DPI=96
 
-# graphics drivers for desktop
-export LIBVA_DRIVER_NAME=iHD
-export VDPAU_DRIVER=va_gl
+  # graphics drivers for desktop
+  export LIBVA_DRIVER_NAME=iHD
+  export VDPAU_DRIVER=va_gl
+fi
 
 # swap control and escape
 setxkbmap -option caps:swapescape
