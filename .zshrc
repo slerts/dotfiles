@@ -53,15 +53,6 @@ autoload -Uz zmv
 # enable autocomplete for priv env
 zstyle ':completion::complete:*' gain-privileges 1
 
-# aliases
-alias vim='nvim'
-alias ls='ls --color=auto'
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
-if [[ "$(hostname)" == "nick-Latitude-E7450" ]]; then
-  alias alacritty='alacritty --config-file ~/.config/alacritty/alacritty-laptop.yml'
-fi
-
 #fzf keybinds
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh

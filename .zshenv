@@ -30,3 +30,14 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 
 # local bin used for user scripts and pip installations
 export PATH=$HOME/.local/bin:$PATH
+
+# aliases
+alias vim='nvim'
+alias ls='ls --color=auto'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+if [[ "$(hostname)" == "nick-Latitude-E7450" ]]; then
+  alias alacritty='alacritty --config-file ~/.config/alacritty/alacritty-laptop.yml'
+fi
+
+
