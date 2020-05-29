@@ -10,12 +10,13 @@ font pango:SpaceMono Nerd Font Mono 7
 
 #####----- WINDOW DECORATIONS -----#####
 # remove titlebars for i3-gaps
-for_window [class="^.*"] border pixel 0
+default_border pixel 0
+#for_window [class="^.*"] border pixel 0
 hide_edge_borders both
 
 ######----- GAPS -----#####
-gaps inner 5
-gaps outer 5
+gaps inner 2
+gaps outer 2
 
 #####----- AUTOSTARTING APPLICATIONS -----#####
 #
@@ -60,14 +61,14 @@ for_window [class="mpv"] floating enable
 #####----- SCRATCHPAD -----#####
 #
 # start gotop in a scratchpad window
-exec --no-startup-id $term --config-file ~/.config/alacritty/alacritty-float.yml --class gotop -e gotop
+exec --no-startup-id $term --class gotop -e gotop
 for_window [instance="gotop"] move scratchpad
 for_window [instance="gotop"] resize set 2880 1620
 for_window [instance="gotop"] move absolute position center
 bindsym $mod+F1 [instance="gotop"] scratchpad show
 #
 # start vim todo.txt in a scratchpad window
-exec --no-startup-id $term --config-file ~/.config/alacritty/alacritty-float.yml ---class todo -e nvim ~/gdrive-ns/todo.txt
+exec --no-startup-id $term --class todo -e nvim ~/gdrive-ns/todo.txt
 for_window [instance="todo"] move scratchpad
 for_window [instance="todo"] resize set 1480 1620
 for_window [instance="todo"] move absolute position center
